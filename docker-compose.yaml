@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  db_auth:
+    container_name: db_auth
+    ports:
+      - "5432:5432"
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_USER=admin
+      - POSTGRES_DB=db_auth
+    image: postgres:16-alpine3.18
